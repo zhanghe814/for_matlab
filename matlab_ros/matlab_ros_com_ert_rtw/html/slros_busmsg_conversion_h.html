@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="./js/coder_app.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="./rtwreport_utils.js"></script>
+<script type="text/javascript" src="./rtwannotate.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/coder_app.css"/>
+</head>
+<body onload="srcFileOnload();">
+<pre id="code">
+<table class="code" id="codeTbl">
+<tr name="1" id="1">
+<td>1</td><td><span class="pp">#ifndef</span> <a id="1c9" class="tk">_SLROS_BUSMSG_CONVERSION_H_</a></td></tr>
+<tr name="2" id="2">
+<td>2</td><td><span class="pp">#define</span> <a id="2c9" class="tk">_SLROS_BUSMSG_CONVERSION_H_</a></td></tr>
+<tr name="3" id="3">
+<td>3</td><td></td></tr>
+<tr name="4" id="4">
+<td>4</td><td><span class="pp">#include &lt;ros/ros.h&gt;</span></td></tr>
+<tr name="5" id="5">
+<td>5</td><td><span class="pp">#include &lt;geometry_msgs/Point.h&gt;</span></td></tr>
+<tr name="6" id="6">
+<td>6</td><td><span class="pp">#include &lt;geometry_msgs/Pose.h&gt;</span></td></tr>
+<tr name="7" id="7">
+<td>7</td><td><span class="pp">#include &lt;geometry_msgs/PoseStamped.h&gt;</span></td></tr>
+<tr name="8" id="8">
+<td>8</td><td><span class="pp">#include &lt;geometry_msgs/Quaternion.h&gt;</span></td></tr>
+<tr name="9" id="9">
+<td>9</td><td><span class="pp">#include &lt;geometry_msgs/Twist.h&gt;</span></td></tr>
+<tr name="10" id="10">
+<td>10</td><td><span class="pp">#include &lt;geometry_msgs/TwistStamped.h&gt;</span></td></tr>
+<tr name="11" id="11">
+<td>11</td><td><span class="pp">#include &lt;geometry_msgs/Vector3.h&gt;</span></td></tr>
+<tr name="12" id="12">
+<td>12</td><td><span class="pp">#include &lt;ros/time.h&gt;</span></td></tr>
+<tr name="13" id="13">
+<td>13</td><td><span class="pp">#include &lt;std_msgs/Header.h&gt;</span></td></tr>
+<tr name="14" id="14">
+<td>14</td><td><span class="pp">#include "matlab_ros_com_types.h"</span></td></tr>
+<tr name="15" id="15">
+<td>15</td><td><span class="pp">#include "slros_msgconvert_utils.h"</span></td></tr>
+<tr name="16" id="16">
+<td>16</td><td></td></tr>
+<tr name="17" id="17">
+<td>17</td><td></td></tr>
+<tr name="18" id="18">
+<td>18</td><td><span class="kw">void</span> <a id="18c6" class="tk">convertFromBus</a>(<a id="18c21" class="tk">geometry_msgs</a>::<a id="18c36" class="tk">Point</a><a id="18c41" class="tk">*</a> <a id="18c43" class="tk">msgPtr</a>, <a id="18c51" class="tk">SL_Bus_matlab_ros_com_geometry_msgs_Point</a> <span class="kw">const</span><a id="18c98" class="tk">*</a> <a id="18c100" class="tk">busPtr</a>);</td></tr>
+<tr name="19" id="19">
+<td>19</td><td><span class="kw">void</span> <a id="19c6" class="tk">convertToBus</a>(<a id="19c19" class="tk">SL_Bus_matlab_ros_com_geometry_msgs_Point</a><a id="19c60" class="tk">*</a> <a id="19c62" class="tk">busPtr</a>, <a id="19c70" class="tk">geometry_msgs</a>::<a id="19c85" class="tk">Point</a> <span class="kw">const</span><a id="19c96" class="tk">*</a> <a id="19c98" class="tk">msgPtr</a>);</td></tr>
+<tr name="20" id="20">
+<td>20</td><td></td></tr>
+<tr name="21" id="21">
+<td>21</td><td><span class="kw">void</span> <a id="21c6" class="tk">convertFromBus</a>(<a id="21c21" class="tk">geometry_msgs</a>::<a id="21c36" class="tk">Pose</a><a id="21c40" class="tk">*</a> <a id="21c42" class="tk">msgPtr</a>, <a id="21c50" class="tk">SL_Bus_matlab_ros_com_geometry_msgs_Pose</a> <span class="kw">const</span><a id="21c96" class="tk">*</a> <a id="21c98" class="tk">busPtr</a>);</td></tr>
+<tr name="22" id="22">
+<td>22</td><td><span class="kw">void</span> <a id="22c6" class="tk">convertToBus</a>(<a id="22c19" class="tk">SL_Bus_matlab_ros_com_geometry_msgs_Pose</a><a id="22c59" class="tk">*</a> <a id="22c61" class="tk">busPtr</a>, <a id="22c69" class="tk">geometry_msgs</a>::<a id="22c84" class="tk">Pose</a> <span class="kw">const</span><a id="22c94" class="tk">*</a> <a id="22c96" class="tk">msgPtr</a>);</td></tr>
+<tr name="23" id="23">
+<td>23</td><td></td></tr>
+<tr name="24" id="24">
+<td>24</td><td><span class="kw">void</span> <a id="24c6" class="tk">convertFromBus</a>(<a id="24c21" class="tk">geometry_msgs</a>::<a id="24c36" class="tk">PoseStamped</a><a id="24c47" class="tk">*</a> <a id="24c49" class="tk">msgPtr</a>, <a id="24c57" class="tk">SL_Bus_matlab_ros_com_geometry_msgs_PoseStamped</a> <span class="kw">const</span><a id="24c110" class="tk">*</a> <a id="24c112" class="tk">busPtr</a>);</td></tr>
+<tr name="25" id="25">
+<td>25</td><td><span class="kw">void</span> <a id="25c6" class="tk">convertToBus</a>(<a id="25c19" class="tk">SL_Bus_matlab_ros_com_geometry_msgs_PoseStamped</a><a id="25c66" class="tk">*</a> <a id="25c68" class="tk">busPtr</a>, <a id="25c76" class="tk">geometry_msgs</a>::<a id="25c91" class="tk">PoseStamped</a> <span class="kw">const</span><a id="25c108" class="tk">*</a> <a id="25c110" class="tk">msgPtr</a>);</td></tr>
+<tr name="26" id="26">
+<td>26</td><td></td></tr>
+<tr name="27" id="27">
+<td>27</td><td><span class="kw">void</span> <a id="27c6" class="tk">convertFromBus</a>(<a id="27c21" class="tk">geometry_msgs</a>::<a id="27c36" class="tk">Quaternion</a><a id="27c46" class="tk">*</a> <a id="27c48" class="tk">msgPtr</a>, <a id="27c56" class="tk">SL_Bus_matlab_ros_com_geometry_msgs_Quaternion</a> <span class="kw">const</span><a id="27c108" class="tk">*</a> <a id="27c110" class="tk">busPtr</a>);</td></tr>
+<tr name="28" id="28">
+<td>28</td><td><span class="kw">void</span> <a id="28c6" class="tk">convertToBus</a>(<a id="28c19" class="tk">SL_Bus_matlab_ros_com_geometry_msgs_Quaternion</a><a id="28c65" class="tk">*</a> <a id="28c67" class="tk">busPtr</a>, <a id="28c75" class="tk">geometry_msgs</a>::<a id="28c90" class="tk">Quaternion</a> <span class="kw">const</span><a id="28c106" class="tk">*</a> <a id="28c108" class="tk">msgPtr</a>);</td></tr>
+<tr name="29" id="29">
+<td>29</td><td></td></tr>
+<tr name="30" id="30">
+<td>30</td><td><span class="kw">void</span> <a id="30c6" class="tk">convertFromBus</a>(<a id="30c21" class="tk">geometry_msgs</a>::<a id="30c36" class="tk">Twist</a><a id="30c41" class="tk">*</a> <a id="30c43" class="tk">msgPtr</a>, <a id="30c51" class="tk">SL_Bus_matlab_ros_com_geometry_msgs_Twist</a> <span class="kw">const</span><a id="30c98" class="tk">*</a> <a id="30c100" class="tk">busPtr</a>);</td></tr>
+<tr name="31" id="31">
+<td>31</td><td><span class="kw">void</span> <a id="31c6" class="tk">convertToBus</a>(<a id="31c19" class="tk">SL_Bus_matlab_ros_com_geometry_msgs_Twist</a><a id="31c60" class="tk">*</a> <a id="31c62" class="tk">busPtr</a>, <a id="31c70" class="tk">geometry_msgs</a>::<a id="31c85" class="tk">Twist</a> <span class="kw">const</span><a id="31c96" class="tk">*</a> <a id="31c98" class="tk">msgPtr</a>);</td></tr>
+<tr name="32" id="32">
+<td>32</td><td></td></tr>
+<tr name="33" id="33">
+<td>33</td><td><span class="kw">void</span> <a id="33c6" class="tk">convertFromBus</a>(<a id="33c21" class="tk">geometry_msgs</a>::<a id="33c36" class="tk">TwistStamped</a><a id="33c48" class="tk">*</a> <a id="33c50" class="tk">msgPtr</a>, <a id="33c58" class="tk">SL_Bus_matlab_ros_com_geometry_msgs_TwistStamped</a> <span class="kw">const</span><a id="33c112" class="tk">*</a> <a id="33c114" class="tk">busPtr</a>);</td></tr>
+<tr name="34" id="34">
+<td>34</td><td><span class="kw">void</span> <a id="34c6" class="tk">convertToBus</a>(<a id="34c19" class="tk">SL_Bus_matlab_ros_com_geometry_msgs_TwistStamped</a><a id="34c67" class="tk">*</a> <a id="34c69" class="tk">busPtr</a>, <a id="34c77" class="tk">geometry_msgs</a>::<a id="34c92" class="tk">TwistStamped</a> <span class="kw">const</span><a id="34c110" class="tk">*</a> <a id="34c112" class="tk">msgPtr</a>);</td></tr>
+<tr name="35" id="35">
+<td>35</td><td></td></tr>
+<tr name="36" id="36">
+<td>36</td><td><span class="kw">void</span> <a id="36c6" class="tk">convertFromBus</a>(<a id="36c21" class="tk">geometry_msgs</a>::<a id="36c36" class="tk">Vector3</a><a id="36c43" class="tk">*</a> <a id="36c45" class="tk">msgPtr</a>, <a id="36c53" class="tk">SL_Bus_matlab_ros_com_geometry_msgs_Vector3</a> <span class="kw">const</span><a id="36c102" class="tk">*</a> <a id="36c104" class="tk">busPtr</a>);</td></tr>
+<tr name="37" id="37">
+<td>37</td><td><span class="kw">void</span> <a id="37c6" class="tk">convertToBus</a>(<a id="37c19" class="tk">SL_Bus_matlab_ros_com_geometry_msgs_Vector3</a><a id="37c62" class="tk">*</a> <a id="37c64" class="tk">busPtr</a>, <a id="37c72" class="tk">geometry_msgs</a>::<a id="37c87" class="tk">Vector3</a> <span class="kw">const</span><a id="37c100" class="tk">*</a> <a id="37c102" class="tk">msgPtr</a>);</td></tr>
+<tr name="38" id="38">
+<td>38</td><td></td></tr>
+<tr name="39" id="39">
+<td>39</td><td><span class="kw">void</span> <a id="39c6" class="tk">convertFromBus</a>(<a id="39c21" class="tk">ros</a>::<a id="39c26" class="tk">Time</a><a id="39c30" class="tk">*</a> <a id="39c32" class="tk">msgPtr</a>, <a id="39c40" class="tk">SL_Bus_matlab_ros_com_ros_time_Time</a> <span class="kw">const</span><a id="39c81" class="tk">*</a> <a id="39c83" class="tk">busPtr</a>);</td></tr>
+<tr name="40" id="40">
+<td>40</td><td><span class="kw">void</span> <a id="40c6" class="tk">convertToBus</a>(<a id="40c19" class="tk">SL_Bus_matlab_ros_com_ros_time_Time</a><a id="40c54" class="tk">*</a> <a id="40c56" class="tk">busPtr</a>, <a id="40c64" class="tk">ros</a>::<a id="40c69" class="tk">Time</a> <span class="kw">const</span><a id="40c79" class="tk">*</a> <a id="40c81" class="tk">msgPtr</a>);</td></tr>
+<tr name="41" id="41">
+<td>41</td><td></td></tr>
+<tr name="42" id="42">
+<td>42</td><td><span class="kw">void</span> <a id="42c6" class="tk">convertFromBus</a>(<a id="42c21" class="tk">std_msgs</a>::<a id="42c31" class="tk">Header</a><a id="42c37" class="tk">*</a> <a id="42c39" class="tk">msgPtr</a>, <a id="42c47" class="tk">SL_Bus_matlab_ros_com_std_msgs_Header</a> <span class="kw">const</span><a id="42c90" class="tk">*</a> <a id="42c92" class="tk">busPtr</a>);</td></tr>
+<tr name="43" id="43">
+<td>43</td><td><span class="kw">void</span> <a id="43c6" class="tk">convertToBus</a>(<a id="43c19" class="tk">SL_Bus_matlab_ros_com_std_msgs_Header</a><a id="43c56" class="tk">*</a> <a id="43c58" class="tk">busPtr</a>, <a id="43c66" class="tk">std_msgs</a>::<a id="43c76" class="tk">Header</a> <span class="kw">const</span><a id="43c88" class="tk">*</a> <a id="43c90" class="tk">msgPtr</a>);</td></tr>
+<tr name="44" id="44">
+<td>44</td><td></td></tr>
+<tr name="45" id="45">
+<td>45</td><td></td></tr>
+<tr name="46" id="46">
+<td>46</td><td><span class="pp">#endif</span></td></tr>
+<tr name="47" id="47">
+<td>47</td><td></td></tr>
+</table>
+</pre>
+</body>
+</html>
